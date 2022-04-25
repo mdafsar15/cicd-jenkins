@@ -1,35 +1,24 @@
 pipeline 
 	{
     agent any
-
+	tools {
+		maven 'maven_3_5_0'
+	}
     stages 
 		{
         stage('Build') {
             steps 
 			{
-                echo 'Build App'
+                sh script: 'mvn clean package'
             }
         }
-		stage('Test') {
+		stage('Upload Jar to Nexus') {
             steps 
 			{
-                echo 'Test App'
+                sh script: 'mvn clean package'
             }
         }
-		stage('Deploy') {
-            steps 
-			{
-                echo 'Deploy App'
-            }
-        }
-    }
 	
-	post
-	{
-		always
-		{
-			emailext body: 'Summary', subject: 'Pipeline Status', to: 'afsaralam7200@gmail.com'
-		}
-	}
+    }
 	
 }
