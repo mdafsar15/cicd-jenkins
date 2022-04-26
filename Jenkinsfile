@@ -18,9 +18,9 @@ pipeline
                 nexusArtifactUploader artifacts: [
                 [
                 artifactId: 'cicd-jenkins', 
-                classifier: '', file: 
-                'target/cicd-jenkins-0.0.1.war', 
-                type: 'war'
+                classifier: '', 
+                file: '/var/lib/jenkins/workspace/nexus-jenkins/target/cicd-jenkins-0.0.1.jar', 
+                type: 'jar'
                 ]
               ], 
               credentialsId: '24598f4d-5e13-4f54-ae8a-8d299cea8b89', 
