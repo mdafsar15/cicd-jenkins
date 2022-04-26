@@ -25,10 +25,10 @@ pipeline
               ], 
               credentialsId: '24598f4d-5e13-4f54-ae8a-8d299cea8b89', 
               groupId: 'com.genx', 
-              nexusUrl: '15.207.100.147:8081', 
+              nexusUrl: '13.234.75.8:8081', 
               nexusVersion: 'nexus2', 
               protocol: 'http', 
-              repository: 'http://15.207.100.147:8081/repository/simpleapp-release-nexus/', 
+              repository: 'http://13.234.75.8:8081/repository/simpleapp-release-nexus', 
               version: '0.0.1'
             }
         }
